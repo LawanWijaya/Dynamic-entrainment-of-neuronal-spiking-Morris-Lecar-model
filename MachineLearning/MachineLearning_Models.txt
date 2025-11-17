@@ -1,0 +1,2 @@
+This folder consists of the Machine Learning models we checked and the one we selected for dynamic entrainment.
+This also includes the tests we did.
