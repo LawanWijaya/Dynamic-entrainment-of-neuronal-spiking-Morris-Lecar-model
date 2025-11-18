@@ -1,1 +1,3 @@
-
+In our main study, we used I0=80.
+With g_Ca=4 and all the other parameters unchanged, we observed polyglot entrainment when I0=95.
+This folder contains the training dataset and the trained machine learning model we used for dynamic entrainment in that scenario. 
