@@ -1,0 +1,24 @@
+# Morris Lecar Equations
+
+dv/dt = (I - gl*(V-El) - gk*n*(V-Ek) - gca*minf(V)*(V-Eca))/C
+dn/dt = phi * (ninf(V) - n)/Tau(V)
+
+param I=10, C=20, phi=0.04  
+param Ek=-84 , Eca=120 , El=-60
+param gl=2 , gk=8 , gca=4.4 
+
+param V1=-1.2, V2=18, V3=2, V4=30
+
+minf(V) = (1 + tanh((V-V1)/V2))/2
+Tau(V) = 1/(cosh((V-V3)/(2*V4)))
+ninf(V) = (1 + tanh((V-V3)/V4))/2
+
+init V=-20 , n=0 
+
+@ total=1000
+@ xp=t,yp=V
+@ xlo=0,ylo=-80,xhi=500,yhi=30
+@ ds=0.001,Nmax=5000,Ntst=1000,Npr=100,dsmin=1e-4,dsmax=0.1,Parmin=10,Parmax=300,NormMax=2000
+@ autoxmin=10,autoxmax=300,autoymin=-2,autoymax=3
+
+done
