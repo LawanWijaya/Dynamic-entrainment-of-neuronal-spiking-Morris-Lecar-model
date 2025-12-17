@@ -175,26 +175,26 @@ for i = 1:COUNTER
         [val,~]=intersect(L_1,L_2);
         FORCING1(val(1):val(end)) = I0+Amp;
 
-        figure(1) %first square pulse
-        plot(time,Y(:,1), '-k','linewidth', lw);
-        hold on
-        plot(time(locs), Y(locs), 'or')
-        plot(time, FORCING1 - I0 - 80, '-r', 'linewidth', lw);
-
-        if isempty(spike_location)
-            text(140, 20, 'subthreshold', 'FontSize', 18)
-        else
-            text(140, 20, 'spike', 'FontSize', 18)
-        end
-
-        xlabel('t'); ylabel('V(t)');
-        title(sprintf('Amp = %.2f -  DC = %.1f', Amp, php), 'interpreter', 'latex');
-        set(gca, 'FontSize', 18)
-        %xlim([time(1) time(end)/5])
-        %ylim([-90 40])
-        hold off
-
-        pause(0.1)
+% % % %         figure(1) %first square pulse
+% % % %         plot(time,Y(:,1), '-k','linewidth', lw);
+% % % %         hold on
+% % % %         plot(time(locs), Y(locs), 'or')
+% % % %         plot(time, FORCING1 - I0 - 80, '-r', 'linewidth', lw);
+% % % % 
+% % % %         if isempty(spike_location)
+% % % %             text(140, 20, 'subthreshold', 'FontSize', 18)
+% % % %         else
+% % % %             text(140, 20, 'spike', 'FontSize', 18)
+% % % %         end
+% % % % 
+% % % %         xlabel('t'); ylabel('V(t)');
+% % % %         title(sprintf('Amp = %.2f -  DC = %.1f', Amp, php), 'interpreter', 'latex');
+% % % %         set(gca, 'FontSize', 18)
+% % % %         %xlim([time(1) time(end)/5])
+% % % %         %ylim([-90 40])
+% % % %         hold off
+% % % % 
+% % % %         pause(0.1)
 
     end
 %%
@@ -485,31 +485,31 @@ for i = 1:COUNTER
         FORCING2(val(1):val(end)) = I0+Amp;
 
         FORCING3 = FORCING1 + FORCING2;
-
-        figure(3)
-        plot(time, FORCING3 - 2*I0 - 80, '-r', 'linewidth', lw);
-        hold on
-
-
-        plot(time,Y(:,1), '-k','linewidth', lw);
-        hold on
-        plot(time(locs), Y(locs), 'or')
-
-        if isempty(spike_location)
-            text(140, 20, 'subthreshold', 'FontSize', 18)
-        else
-            text(140, 20, 'spike', 'FontSize', 18)
-        end
-
-        xlabel('t'); ylabel('V(t)');
-        title(sprintf('P1 = %.3f -  P2 = %.3f - P3 = %.3f', p1, p2, p3), 'interpreter', 'latex');
-        set(gca, 'FontSize', 18)
-        %xlim([time(1) time(end)/5])
-        %ylim([-90 -40])
-        hold off
-
-
-        pause(0.1)
+% % % % 
+% % % %         figure(3)
+% % % %         plot(time, FORCING3 - 2*I0 - 80, '-r', 'linewidth', lw);
+% % % %         hold on
+% % % % 
+% % % % 
+% % % %         plot(time,Y(:,1), '-k','linewidth', lw);
+% % % %         hold on
+% % % %         plot(time(locs), Y(locs), 'or')
+% % % % 
+% % % %         if isempty(spike_location)
+% % % %             text(140, 20, 'subthreshold', 'FontSize', 18)
+% % % %         else
+% % % %             text(140, 20, 'spike', 'FontSize', 18)
+% % % %         end
+% % % % 
+% % % %         xlabel('t'); ylabel('V(t)');
+% % % %         title(sprintf('P1 = %.3f -  P2 = %.3f - P3 = %.3f', p1, p2, p3), 'interpreter', 'latex');
+% % % %         set(gca, 'FontSize', 18)
+% % % %         %xlim([time(1) time(end)/5])
+% % % %         %ylim([-90 -40])
+% % % %         hold off
+% % % % 
+% % % % 
+% % % %         pause(0.1)
         %%
 
 
